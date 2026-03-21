@@ -1,3 +1,120 @@
 @use "./base/base";
 @use "./base/reset";
 @use "./global" as *;
+
+.inner {
+    width:100%;
+    max-width: 1080px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    @include mq("md"){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.heading {
+    //並び
+    position: relative;
+    font-size: 36px;
+    font-weight: $medium;
+    //余白
+    padding-bottom: 17px;
+    letter-spacing: 0.05em;
+    color: $green;
+    //大きさ（指定なし）
+}
+
+.heading.heading--center {
+    text-align: center;
+
+    @include mq("md"){
+        text-align: left;
+    }
+}
+
+.heading.heading--center::after {
+    left :50%;
+    transform: translateX(-50%);
+
+    @include mq("md"){
+        text-align: left;
+        left :0;
+        transform: translateX(0);
+    }
+}
+
+
+.heading::after {
+    //並び
+    position:absolute;
+    bottom:0;
+    left:0;
+    //余白（指定なし）
+    //大きさ
+    width: 34px;
+    height: 4px;
+    //疑似要素に必須
+    content:"";
+    border-radius: 2px;
+    background-color: $green;
+}
+
+.text {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    font-weight: $medium;
+    //line-height:行間サイズ/フォントサイズ
+    line-height: 1.875;
+}
+
+.text.text--large {
+    font-size: 24px;
+    //line-height:行間サイズ/フォントサイズ
+    line-height: 1.833;
+
+    @include mq("md"){
+    font-size: 20px;
+    }
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    padding: 15px;
+    transition: background-color 0.3s;
+    letter-spacing: 0.05em;
+    color: $white;
+    border-radius: 4px;
+    background-color: $green;
+    &:hover {
+        opacity:1;
+        background-color: $green2;
+    }
+}
+
+.contact-button.contact-button--wide {
+    font-size: 20px;
+    width: 220px;
+
+    @include mq("md"){
+        font-size: 16px;
+    }
+}
+
+.md-none {
+    @include mq("md"){
+        display: none;
+    }
+}
+
+.md-show {
+    display: none;
+    @include mq("md"){
+        display: block;
+    }
+}
