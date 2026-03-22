@@ -2,6 +2,64 @@
 @use "./base/reset";
 @use "./global" as *;
 
+//ヘッダー
+.header {
+//    position:fixed;         //画面が大きくなったら動作確認
+//    z-index: 1000;
+    width: 100%;
+    height: 74px;
+    top:0;
+    left:0;
+    background-color: beige;
+}
+
+.header__inner {
+    display: flex;
+    padding: 0 120px;
+    align-items: center;
+    height:inherit;
+}
+
+.header__name {
+    font-size: 26px;
+    font-weight: $medium;
+    color:$green;
+    margin-right: auto;
+    align-items:center;
+    height:inherit;
+}
+
+.header__nav {
+    height:inherit;
+}
+
+.header__items {
+    display: flex;
+    align-items: center;
+    height:inherit;
+}
+
+.header__item:not(:first-child) {
+    margin-left: 66px;
+}
+
+.header__link {
+    font-size: 16px;
+    font-weight: $medium;
+    align-items:center;
+    letter-spacing: 0.05em;
+    color:$green;
+    height:inherit;
+}
+
+.button__contact {
+    margin-left: 66px;
+}
+
+
+
+//共通パーツ
+
 .inner {
     width:100%;
     max-width: 1080px;
