@@ -24,8 +24,9 @@
     font-size: 26px;
     font-weight: $medium;
     color:$green;
-    margin-right: auto;
+    display: flex;
     align-items:center;
+    margin-right: auto;
     height:inherit;
 }
 
@@ -46,13 +47,14 @@
 .header__link {
     font-size: 16px;
     font-weight: $medium;
+    display: flex;
     align-items:center;
     letter-spacing: 0.05em;
     color:$green;
     height:inherit;
 }
 
-.button__contact {
+.header__contact {
     margin-left: 66px;
 }
 
