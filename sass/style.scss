@@ -18,6 +18,12 @@
     padding: 0 120px;
     align-items: center;
     height:inherit;
+    @include mq("lg"){
+        padding: 0 25px;
+    }
+    @include mq("md"){
+        padding: 0 15px;
+    }
 }
 
 .header__name {
@@ -28,6 +34,9 @@
     align-items:center;
     margin-right: auto;
     height:inherit;
+    @include mq("md"){
+        font-size: 24px;
+    }
 }
 
 .header__nav {
@@ -58,6 +67,55 @@
     margin-left: 66px;
 }
 
+//ハンバーガーメニュー
+.hamburger {
+    position:fixed;
+    z-index: 9999;
+    top: 30px;
+    right: 15px;
+    width:25px;
+    height:16px;
+    cursor:pointer;
+//    background-color: $green;
+}
+
+.hamburger span{
+    position:absolute;
+    left: 0;
+    display: inline-block;
+    width: 100px;
+    height:2px;
+    background-color: $green;
+}
+
+
+.js-hamburger {
+
+}
+
+.drawer-menu {
+
+}
+
+.js-drawer {
+
+}
+
+.drawer-menu__inner {
+
+}
+
+.drawer-menu__item {
+
+}
+
+.drawer-menu__link {
+
+}
+
+.drawer-menu__contact {
+
+}
 
 
 //共通パーツ
