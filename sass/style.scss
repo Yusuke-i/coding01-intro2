@@ -156,6 +156,94 @@
     margin-top: 48px;
 }
 
+//メインビュー
+.mv {
+    width:100%;
+    height:100vh;
+    background-image: url(/images/mv-img.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+.mv__inner {
+    position:relative;
+    width: 100%;
+    height:inherit;
+}
+
+.mv__title {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width: 100%;
+    font-size: 48px;
+    transform: translate(-50%, -50%);        //難易度：高
+    color:$beige;
+    line-height: 1.375;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    @include mq("md"){
+        font-size: 30px;
+        line-height: 1.467;
+    }
+}
+
+// Visionセクション
+.vision {
+    padding: 145px 0 120px;
+
+    @include mq("md"){
+    padding: 135px 0 140px;
+    }
+}
+
+.vision__header {
+    margin-top: 50px;
+}
+
+.vision__text  {
+    margin-top: 50px;
+}
+
+// Serviceセクション
+.service {
+    padding: 100px 0 100px;
+    background-color: $beige;
+}
+
+.service__cards {       //Serviceの重要ポイント
+    margin-top: 50px;
+    display: grid;          //グリッドレイアウトを定義（mdn）
+    column-gap: 35px;
+    row-gap: 46px;
+   // grid-template-columns: 150px 150px 150px;  //本来の使い方
+   // minmax():下限のサイズ
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    @include mq("md"){
+        padding: 0 12.5px;
+    }
+}
+
+.card__img {
+    aspect-ratio: 4 / 3;
+}
+
+.card__title {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: $medium;
+    text-align:center;
+    //line-height: 1;         //デザインカンプは行間が25、フォント16px⇒1
+    line-height: 1.562;       //ただ動画は行間が25、フォント16pxって言っているので、25/16＝1.562
+    color: $green;
+    @include mq("md"){
+        margin-top: 15px;
+    }
+}
+
 
 //共通パーツ
 
