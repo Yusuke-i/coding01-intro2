@@ -243,6 +243,47 @@
         margin-top: 15px;
     }
 }
+//Newsセクション
+.news {
+    padding: 100px 0 101px;
+}
+
+.news__inner {
+}
+
+.news__heading {
+
+}
+
+.news__items {
+}
+
+.news__item {
+    display: flex;
+    padding-bottom: 30px;
+    border-bottom:solid 1px beige;
+    @include mq("md"){
+        direction ;
+    }
+}
+
+.news-item {
+    margin-top: 30px;
+    color: $green;
+}
+
+.news-item__date {
+    font-size: 15px;
+    line-height: 1.467;
+    font-family: "Roboto", sans-serif;
+}
+
+.news-item__title {
+    margin-left: 40px;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+}
+
 
 
 //共通パーツ

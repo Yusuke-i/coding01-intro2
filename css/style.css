@@ -389,6 +389,39 @@ select::-ms-expand {
   }
 }
 
+.news {
+  padding: 100px 0 101px;
+}
+
+@media screen and (max-width: 768px) {
+  .news__items {
+    direction-item: column;
+  }
+}
+
+.news__item {
+  display: flex;
+  padding-bottom: 30px;
+  border-bottom: solid 1px beige;
+}
+
+.news-item {
+  margin-top: 30px;
+  color: #2B3F2F;
+}
+
+.news-item__date {
+  font-size: 15px;
+  line-height: 1.467;
+  font-family: "Roboto", sans-serif;
+}
+
+.news-item__title {
+  margin-left: 40px;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+}
+
 .inner {
   width: 100%;
   max-width: 1080px;
